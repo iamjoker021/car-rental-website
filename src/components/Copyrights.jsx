@@ -1,6 +1,6 @@
 const Copyrights = () => {
     return (
-        <footer className="padding">
+        <footer className="padding text-center">
             <p>Made by Joker</p>
         </footer>
     )

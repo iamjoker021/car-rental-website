@@ -34,10 +34,12 @@ const Footer = () => {
             </div>
             <div>
                 <h3>Contact Info</h3>
-                <p>Give Phone No</p>
-                <p>Give Phone No</p>
-                <p>Give Phone No</p>
-                <p>Give Phone No</p>
+                <ul>
+                    <li>Give Phone No</li>
+                    <li>Give Phone No</li>
+                    <li>Give Phone No</li>
+                    <li>Give Phone No</li>
+                </ul>
             </div>
         </section>
     )

@@ -27,6 +27,7 @@ a {
 /* Style */
 body {
     font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.3;
 }
 
 section {
@@ -38,8 +39,13 @@ h2 span {
     color: var(--bs-primary);
 }
 
-p {
+p,
+section.footer.padding > div > nav > ul > li > a,
+#root > section.footer.padding > div > ul
+ {
     color: #6e7684;
+    margin-bottom: 1rem;
+    line-height: 1.6;
 }
 
 h2, h3 {
@@ -161,8 +167,53 @@ section.services .card {
     padding: 1rem 3rem;
 }
 
-section.client-review .cards img{
+section.central-support.padding.text-center > div > div{
+    padding: 1rem;
+    background-color: #F2F2F2;
+    border-radius: 15px;
+}
+
+section.central-support > div > div img {
     width: 100%;
+    border-radius: 15px;
+}
+
+section.central-support h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+section.footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+section.footer li {
+    margin-bottom: 1rem;
+}
+
+section.footer, footer{
+    background-color: #000C21;
+    color: white;
+}
+
+footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+section.footer form input {
+    padding: 1rem;
+    border-radius: 50px;
+    border: 0;
+}
+
+section.footer form button {
+    padding: 0.5rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
 }
 
 /* Layout */
@@ -247,4 +298,9 @@ section.home form > div > input,
 section.home form > div > select,
 section.home form > div > button {
     flex: 1;
+}
+
+section.footer form {
+    display: flex;
+    gap: 0.5rem;
 }
