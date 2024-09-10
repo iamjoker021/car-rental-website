@@ -30,10 +30,10 @@ body {
     line-height: 1.3;
 }
 
-section {
-    /* height: 90vh; */
-    /* margin-bottom: 5rem; */
-}
+/* section {
+    height: 90vh;
+    margin-bottom: 5rem;
+} */
 
 h2 span {
     color: var(--bs-primary);
@@ -216,6 +216,23 @@ section.footer form button {
     border: 1px solid white;
 }
 
+section.client-review img {
+    border-radius: 100%;
+}
+
+section.client-review .card {
+    border: 1.3px solid #1F2E4E;
+    border-radius: 1rem;
+}
+
+section.client-review .card > div:nth-child(1) {
+    background-color: #F2F2F2;
+}
+
+section.client-review .card > div {
+    padding: 1rem;
+}
+
 /* Layout */
 header {
     display: flex;
@@ -303,4 +320,15 @@ section.home form > div > button {
 section.footer form {
     display: flex;
     gap: 0.5rem;
+}
+
+section.client-review .card {
+    display: flex;
+    flex-direction: column;
+}
+
+section.client-review .card > div:nth-child(1) {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }

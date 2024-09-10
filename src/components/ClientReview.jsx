@@ -12,11 +12,17 @@ const ClientReview = () => {
             <div className="cards">
                 {carContent.map(card => (
                     <div className="card">
-                        <img src={card.imgUrl} alt="" />
-                        <h3>{card.name}</h3>
-                        <p>{card.title}</p>
-                        <p>{card.rating}</p>
-                        <p>{card.content}</p>
+                        <div>
+                            <img src={card.imgUrl} alt="" />
+                            <div>
+                                <h3>{card.name}</h3>
+                                <p>{card.title}</p>
+                                <p>{card.rating}</p>
+                            </div>
+                        </div>
+                        <div>
+                            <p>{card.content}</p>
+                        </div>
                     </div>
                 ))}
             </div>
