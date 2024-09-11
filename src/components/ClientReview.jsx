@@ -15,6 +15,14 @@ const ClientReview = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
+        responsive: [{
+            breakpoint: 768,
+            settings_3: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 1
+            }
+          }]
         // speed: 5000,
         // autoplaySpeed: 500,
         // cssEase: "linear"

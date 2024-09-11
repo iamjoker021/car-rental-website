@@ -1,4 +1,5 @@
-import NavList from "./NavList";
+import DesktopNav from "./DesktopNav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     return (
@@ -17,7 +18,8 @@ const Header = () => {
                 <span>Cental</span>
                 </div>
             </h1>
-            <NavList />
+            <DesktopNav />
+            <MobileNav />
             <button>Get Started</button>
         </header>
     )
