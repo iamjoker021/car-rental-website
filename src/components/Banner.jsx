@@ -1,4 +1,6 @@
-const Banner = () => {
+import Carousel from 'react-bootstrap/Carousel'
+
+const FormBanner = () => {
     return (
         <section className="home padding" id="home">
             <form>
@@ -49,5 +51,32 @@ const Banner = () => {
         </section>
     )
 }
+
+const Banner = () => {
+    return (
+      <Carousel>
+      <Carousel.Item>
+        <img
+        //   className="d-block w-100"
+          src="https://themewagon.github.io/Cental/img/carousel-1.jpg"
+          alt="First slide"
+        />
+        <Carousel.Caption>
+            <FormBanner />
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          src="https://themewagon.github.io/Cental/img/carousel-2.jpg"
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+            <FormBanner />
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    )
+}
+
 
 export default Banner;

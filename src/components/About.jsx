@@ -17,9 +17,12 @@ const About = () => {
                 <div className="notes">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro tempore quo minus iusto adipisci, rerum ducimus asperiores illum similique pariatur neque blanditiis eos nesciunt voluptas assumenda veniam consequuntur incidunt provident.</p>
                 </div>
-                <div>
-                    <div>
-                        17 Years of Exp
+                <div className="side-by-side">
+                    <div className="experience">
+                        <h4>
+                            <span>17</span>
+                            <span>Years of Experience</span>
+                        </h4>
                     </div>
                     <div>
                         <ul>
@@ -30,8 +33,10 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div>
-                    <button>More About Us</button>
+                <div className="side-by-side">
+                    <div>
+                        <button>More About Us</button>
+                    </div>
                     <div className="founder">
                         <div className="image">
                             <img src="https://themewagon.github.io/Cental/img/testimonial-1.jpg" alt="" />

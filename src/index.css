@@ -72,14 +72,37 @@ header h1 {
     font-size: 2rem;
 }
 
+.carousel-item img{
+    width: 100%;
+}
+
+.carousel-indicators {
+    gap: 1rem;
+    align-items: center;
+}
+.carousel-indicators button{
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 100%;
+    border: 0;
+}
+.carousel-indicators button.active{
+    border: 5px solid red;
+}
+.carousel-caption {
+    left: 1%;
+    right: 1%
+}
+.carousel.slide a {
+    display: none;
+}
+
+.carousel img {
+    filter: brightness(0.5);
+}
+
 section.home {
-    background-image: url('https://themewagon.github.io/Cental/img/carousel-2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode:darken;
-    background-color: rgb(0, 0, 0, 0.6);
     color: #fff !important;
-    padding-top: 4rem;
     padding-bottom: 4rem;
 }
 
@@ -89,7 +112,7 @@ section.home form {
     padding: 1rem   3rem;
 }
 
-section.home form > * {
+section.home form > div {
     margin-bottom: 0.5rem;
     padding: 0.2rem 1rem;
 }
@@ -104,6 +127,7 @@ section.home form label,
 section.home form button {
     padding: 0.5rem 0.5rem;
     border: 1px solid lightgray;
+    margin: 0;
 }
 
 section.home form select, 
@@ -140,8 +164,13 @@ section.home > div h2 {
     font-size: 3rem;
 }
 
-section.feature {
+section.feature
+{
     background-color: #F2F2F2;
+}
+
+section.client-review {
+    background-color: lightgrey;
 }
 
 section.feature > p {
@@ -227,10 +256,65 @@ section.client-review .card {
 
 section.client-review .card > div:nth-child(1) {
     background-color: #F2F2F2;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
 }
 
 section.client-review .card > div {
     padding: 1rem;
+}
+
+section.about .cards .card {
+    padding: 1rem;
+    background-color: #F2F2F2;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 15px;
+}
+
+section.about .notes {
+    border-left: 5px solid #1F2E4E;
+    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 0 1rem;
+}
+
+section.about .experience {
+    background-color: #1F2E4E;
+    border-radius: 15px;
+    color: white;
+}
+
+section.about .experience span:nth-child(1) {
+    font-size: 2rem;
+}
+
+section.about li {
+    margin-bottom: 0.5rem;
+}
+
+section.about .side-by-side {
+    margin-bottom: 1rem;
+}
+
+section.about .side-by-side button {
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    background-color: red;
+    border: 0;
+    color: white;
+    font-size: 1.2rem;
+}
+
+section.about .side-by-side > div:nth-child(2) img {
+    border-radius: 100%;
+}
+
+.slick-slide {
+    margin: 0 10px;
+}
+
+header ul {
+    margin: 0;
 }
 
 /* Layout */
@@ -246,11 +330,6 @@ header ul {
     gap: 2rem;
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
 section.home,
 section.about {
@@ -283,8 +362,9 @@ section.services .cards {
     gap: 1rem;
 }
 
-section.central-support .cards,
-section.client-review .cards {
+section.central-support .cards
+/* ,section.client-review .cards  */
+{
     display: flex;
     gap: 1rem;
 }
@@ -322,13 +402,131 @@ section.footer form {
     gap: 0.5rem;
 }
 
-section.client-review .card {
+/* section.client-review .card {
     display: flex;
     flex-direction: column;
+} */
+
+section.client-metric .card {
+    background-color: unset;
+}
+
+section.feature .card {
+    background-color: unset;
+    border: unset;
+}
+
+section.client-review .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+section.client-review button {
+    /* background-color: black; */
+    padding: 1rem;
 }
 
 section.client-review .card > div:nth-child(1) {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+section.about .cards {
+    display: flex;
+    gap: 1rem;
+}
+
+section.about .side-by-side {
+    display: flex;
+    gap: 1rem;
+}
+
+section .side-by-side > * {
+    flex: 1;
+}
+
+section.about .experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about .experience h4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+section.about .side-by-side div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.about .side-by-side > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.slick-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (width= 768px) {
+    .padding {
+        padding: 1rem 1rem;
+    }
+
+    section.feature .cards {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.feature .cards .card:nth-child(1) {
+        order: 3;
+    }
+    section.feature .cards .card:nth-child(2) {
+        order: 1;
+    }
+    section.feature .cards .card:nth-child(3) {
+        order: 2;
+    }
+    section.feature .cards .card:nth-child(4) {
+        order: 4;
+    }
+    section.feature .cards .card:nth-child(5) {
+        order: 5;
+    }
+
+    section.about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.services .cards
+    ,section.central-support .cards
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+    }
+
+    section.footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
+    }
+
+    section.home > div {
+        display: none;
+    }
 }
