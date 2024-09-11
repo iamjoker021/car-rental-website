@@ -11,22 +11,21 @@ const ClientReview = () => {
 
     const settings = {
         dots: true,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        responsive: [{
-            breakpoint: 768,
-            settings_3: {
+        infinite: false,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
               slidesToShow: 1,
-              slidesToScroll: 1,
-              initialSlide: 1
+              slidesToScroll: 1
             }
-          }]
-        // speed: 5000,
-        // autoplaySpeed: 500,
-        // cssEase: "linear"
-    };
+          }
+        ]
+      };
 
     return (
         <section className="client-review padding">

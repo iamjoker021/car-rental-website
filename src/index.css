@@ -109,7 +109,7 @@ section.home {
 section.home form {
     background-color: #1f2e4e !important;
     border-radius: 15px;
-    padding: 1rem   3rem;
+    padding: 1rem 3rem;
 }
 
 section.home form > div {
@@ -317,6 +317,15 @@ header ul {
     margin: 0;
 }
 
+.mobile-banner {
+    background-image: url('https://themewagon.github.io/Cental/img/carousel-1.jpg');
+}
+
+section.home.padding.mobile-banner
+{
+    display: none;
+}
+
 /* Layout */
 header {
     display: flex;
@@ -484,6 +493,16 @@ section.about .side-by-side > div:nth-child(2) {
 }
 
 @media screen and (width= 768px) {
+    section.home.padding.mobile-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    div.carousel.slide
+    {
+        display: none;
+    }
+
     .padding 
     ,section.feature > p{
         padding: 1rem 1rem;
@@ -536,6 +555,25 @@ section.about .side-by-side > div:nth-child(2) {
 }
 
 @media screen and (width < 768px) {
+    section.home.padding.mobile-banner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section.home.padding.mobile-banner form {
+        padding: unset;
+    }
+    section.home.padding.mobile-banner form input 
+    ,section.home.padding.mobile-banner form select
+    ,section.home.padding.mobile-banner form label
+    {
+        padding: unset;
+    }
+    div.carousel.slide
+    {
+        display: none;
+    }
+
     .desktop-navbar 
     ,header > button
     {
